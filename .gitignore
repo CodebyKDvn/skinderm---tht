@@ -5,10 +5,7 @@ __pycache__/
 venv/
 .env
 
-# Large models
-backend/models/best_mit_b5_unet.pth
-backend/models/best_model.pth
-backend/models/best_model_isic2019.pth
+# Large models are now managed by Git LFS (.gitattributes)
 
 # Logs
 backend/logs/
