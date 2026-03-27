@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Large models
+backend/models/best_mit_b5_unet.pth
+backend/models/best_model.pth
+backend/models/best_model_isic2019.pth
+
+# Logs
+backend/logs/
+
+# IDE files
+.vscode/
+.idea/
