@@ -228,6 +228,7 @@ a {
     height: 100vh;
     z-index: -2;
     overflow: hidden;
+    pointer-events: none; /* Add this to ensure it doesn't block interactions */
 }
 
 .hero-video {
@@ -253,6 +254,7 @@ a {
     background: linear-gradient(90deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.05) 50%, transparent 100%);
     backdrop-filter: blur(2px); /* Very subtle blur for text clarity */
     -webkit-backdrop-filter: blur(2px);
+    pointer-events: none; /* Ensure overlay doesn't block clicks */
 }
 
 /* =========================================
