@@ -120,7 +120,7 @@ except Exception as e:
 try:
     # 3. Load Segmentation Model (mit_b5 Unet)
     SEG_MODEL_PATH = "models/best_mit_b5_unet.pth"
-    print("⏳ Loading segmentation model (339MB)...")
+    print("Loading segmentation model (339MB)...")
     model_seg = smp.Unet(
         encoder_name="mit_b5",
         encoder_weights=None, 
@@ -451,3 +451,7 @@ def chat_interaction(chat_req: ChatRequest):
         yield f'data: {{"error": "{msg}"}}\n\n'
 
     return StreamingResponse(generate_events(), media_type="text/event-stream")
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8080)

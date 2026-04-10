@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 placeholderText.textContent = "Đang áp dụng mô hình U-Net & ConvNeXtV2...";
                 
                 // Call actual backend API
-                return fetch("http://127.0.0.1:8000/api/analyze", {
+                return fetch("http://127.0.0.1:8080/api/analyze", {
                     method: "POST",
                     body: formData
                 });
@@ -604,7 +604,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const context = window.currentDiagnosisContext || "Chưa có kết quả chẩn đoán.";
             const model = aiModelSelect.value;
             
-            const response = await fetch("http://127.0.0.1:8000/api/chat", {
+            const response = await fetch("http://127.0.0.1:8080/api/chat", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
